@@ -42,7 +42,7 @@ Map<String, dynamic> _$WaypointToJson(Waypoint instance) => <String, dynamic>{
 GeocodedWaypoint _$GeocodedWaypointFromJson(Map<String, dynamic> json) {
   return GeocodedWaypoint(
     geocoderStatus: json['geocoder_status'] as String,
-    placeId: json['place_id'] as String,
+    placeId: json['place_id'] as String?,
     types:
         (json['types'] as List<dynamic>?)?.map((e) => e as String).toList() ??
             [],

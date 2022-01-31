@@ -276,6 +276,8 @@ class DistanceResponse extends GoogleResponseStatus {
 
   DistanceResponse({
     required String status,
+    /// JSON error_message
+    /// JSON error_message
     String? errorMessage,
     required this.originAddresses,
     required this.destinationAddresses,

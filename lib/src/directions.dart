@@ -261,6 +261,7 @@ class DirectionsResponse extends GoogleResponseStatus {
 
   DirectionsResponse({
     required String status,
+    /// JSON error_message
     String? errorMessage,
     required this.geocodedWaypoints,
     required this.routes,
@@ -304,7 +305,7 @@ class GeocodedWaypoint {
   final String geocoderStatus;
 
   /// JSON place_id
-  final String placeId;
+  final String? placeId;
 
   @JsonKey(defaultValue: <String>[])
   final List<String> types;

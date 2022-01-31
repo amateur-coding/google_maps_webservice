@@ -27,7 +27,7 @@ Map<String, dynamic> _$GeocodingResponseToJson(GeocodingResponse instance) =>
 GeocodingResult _$GeocodingResultFromJson(Map<String, dynamic> json) {
   return GeocodingResult(
     geometry: Geometry.fromJson(json['geometry'] as Map<String, dynamic>),
-    placeId: json['place_id'] as String,
+    placeId: json['place_id'] as String?,
     types:
         (json['types'] as List<dynamic>?)?.map((e) => e as String).toList() ??
             [],

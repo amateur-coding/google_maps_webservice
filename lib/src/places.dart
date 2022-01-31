@@ -545,6 +545,7 @@ class PlacesSearchResponse extends GoogleResponseStatus {
 
   PlacesSearchResponse({
     required String status,
+    /// JSON error_message
     String? errorMessage,
     this.results = const [],
     this.htmlAttributions = const [],
@@ -569,7 +570,7 @@ class PlacesSearchResult {
   final List<Photo> photos;
 
   /// JSON place_id
-  final String placeId;
+  final String? placeId;
 
   final String? scope;
 
@@ -652,7 +653,7 @@ class PlaceDetails {
   final List<Photo> photos;
 
   /// JSON place_id
-  final String placeId;
+  final String? placeId;
 
   /// JSON international_phone_number
   final String? internationalPhoneNumber;
@@ -788,7 +789,7 @@ class Photo {
 @JsonSerializable()
 class AlternativeId {
   /// JSON place_id
-  final String placeId;
+  final String? placeId;
 
   final String scope;
 
@@ -826,6 +827,7 @@ class PlacesDetailsResponse extends GoogleResponseStatus {
 
   PlacesDetailsResponse({
     required String status,
+    /// JSON error_message
     String? errorMessage,
     required this.result,
     required this.htmlAttributions,
@@ -883,6 +885,7 @@ class PlacesAutocompleteResponse extends GoogleResponseStatus {
 
   PlacesAutocompleteResponse({
     required String status,
+    /// JSON error_message
     String? errorMessage,
     required this.predictions,
   }) : super(

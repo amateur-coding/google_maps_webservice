@@ -88,6 +88,7 @@ class TimezoneResponse extends GoogleResponseStatus {
 
   TimezoneResponse({
     required String status,
+    /// JSON error_message
     String? errorMessage,
     required this.dstOffset,
     required this.rawOffset,

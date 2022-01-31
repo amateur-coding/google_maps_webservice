@@ -156,6 +156,7 @@ class GeocodingResponse extends GoogleResponseStatus {
 
   GeocodingResponse({
     required String status,
+    /// JSON error_message
     String? errorMessage,
     required this.results,
   }) : super(
@@ -191,7 +192,7 @@ class GeocodingResult {
   final bool partialMatch;
 
   /// JSON place_id
-  final String placeId;
+  final String? placeId;
 
   GeocodingResult({
     required this.geometry,
